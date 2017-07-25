@@ -1,7 +1,7 @@
 'use strict';
 
 var shimDescription = require('../shim');
-var description = shimDescription();
+shimDescription();
 
 var hasSymbols = require('has-symbols')();
 var test = require('tape');

@@ -1,0 +1,6 @@
+{
+	"rules": {
+		"no-invalid-this": 0,
+		"max-nested-callbacks": 0
+	}
+}

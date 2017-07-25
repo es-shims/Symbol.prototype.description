@@ -4,6 +4,8 @@
 	"description": "Spec-compliant shim for Symbol.prototype.description proposal.",
 	"main": "index.js",
 	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
 		"tests-only": "node test && node test/shimmed",
 		"test": "npm run tests-only"
 	},
@@ -30,6 +32,8 @@
 		"has-symbols": "^1.0.0"
 	},
 	"devDependencies": {
+		"@ljharb/eslint-config": "^12.2.0",
+		"eslint": "^4.3.0",
 		"tape": "^4.7.0"
 	}
 }
