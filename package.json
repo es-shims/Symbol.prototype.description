@@ -1,0 +1,28 @@
+{
+	"name": "symbol.prototype.description",
+	"version": "0.0.0",
+	"description": "Spec-compliant shim for Symbol.prototype.description proposal.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:ljharb/symbol.prototype.description.git"
+	},
+	"keywords": [
+		"polyfill",
+		"shim",
+		"es",
+		"shim",
+		"ecmascript",
+		"symbol",
+		"description"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ljharb/symbol.prototype.description/issues"
+	},
+	"homepage": "https://github.com/ljharb/symbol.prototype.description#readme"
+}
