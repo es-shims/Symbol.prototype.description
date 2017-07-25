@@ -4,7 +4,8 @@
 	"description": "Spec-compliant shim for Symbol.prototype.description proposal.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"tests-only": "node test && node test/shimmed",
+		"test": "npm run tests-only"
 	},
 	"repository": {
 		"type": "git",
@@ -27,5 +28,8 @@
 	"homepage": "https://github.com/ljharb/symbol.prototype.description#readme",
 	"dependencies": {
 		"has-symbols": "^1.0.0"
+	},
+	"devDependencies": {
+		"tape": "^4.7.0"
 	}
 }
