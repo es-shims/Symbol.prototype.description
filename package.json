@@ -24,5 +24,8 @@
 	"bugs": {
 		"url": "https://github.com/ljharb/symbol.prototype.description/issues"
 	},
-	"homepage": "https://github.com/ljharb/symbol.prototype.description#readme"
+	"homepage": "https://github.com/ljharb/symbol.prototype.description#readme",
+	"dependencies": {
+		"has-symbols": "^1.0.0"
+	}
 }
