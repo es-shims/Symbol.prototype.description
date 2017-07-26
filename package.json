@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:ljharb/symbol.prototype.description.git"
+		"url": "git@github.com:es-shims/Symbol.prototype.description.git"
 	},
 	"keywords": [
 		"polyfill",
@@ -27,9 +27,9 @@
 	"author": "Jordan Harband <ljharb@gmail.com>",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/ljharb/symbol.prototype.description/issues"
+		"url": "https://github.com/es-shims/Symbol.prototype.description/issues"
 	},
-	"homepage": "https://github.com/ljharb/symbol.prototype.description#readme",
+	"homepage": "https://github.com/es-shims/Symbol.prototype.description#readme",
 	"dependencies": {
 		"has-symbols": "^1.0.0"
 	},
