@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint .",
+		"postlint": "es-shim-api --bound --skip-shim-returns-polyfill",
 		"security": "nsp check",
 		"tests-only": "node test && node test/shimmed",
 		"pretest": "npm run lint",
@@ -34,6 +35,7 @@
 		"has-symbols": "^1.0.0"
 	},
 	"devDependencies": {
+		"@es-shims/api": "^1.2.0",
 		"@ljharb/eslint-config": "^12.2.0",
 		"eslint": "^4.3.0",
 		"nsp": "^2.6.3",

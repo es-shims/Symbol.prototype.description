@@ -1,5 +1,13 @@
 'use strict';
 
-var polyfill = require('./polyfill');
+var getPolyfill = require('./polyfill');
+var shim = require('./shim');
+var implementation = require('./implementation');
 
-module.exports = Function.call.bind(polyfill());
+var bound = Function.call.bind(getPolyfill());
+
+bound.shim = shim;
+bound.getPolyfill = getPolyfill;
+bound.implementation = implementation;
+
+module.exports = bound;
