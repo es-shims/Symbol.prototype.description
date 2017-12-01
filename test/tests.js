@@ -1,6 +1,7 @@
 'use strict';
 
 var hasSymbols = require('has-symbols')();
+var getInferredName = require('../helpers/getInferredName');
 
 module.exports = function (description, t) {
 	t.test('Symbol description', { skip: !hasSymbols }, function (st) {
@@ -13,4 +14,10 @@ module.exports = function (description, t) {
 
 		st.end();
 	});
+
+	t.test('only possible when inference is supported', { skip: !getInferredName }, function (st) {
+		st.equal(description(Symbol('')), '', 'Symbol("") description is empty string');
+		st.end();
+	});
+
 };

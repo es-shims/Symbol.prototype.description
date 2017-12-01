@@ -38,7 +38,7 @@ test('shimmed', function (t) {
 		st.end();
 	});
 
-	t.test('only possible when shimmed', function (st) {
+	t.test('only possible when shimmed (or inference is supported)', function (st) {
 		st.equal(Symbol('').description, '', 'Symbol("") description is empty string');
 		st.end();
 	});
