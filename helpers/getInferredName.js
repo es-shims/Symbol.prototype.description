@@ -6,5 +6,6 @@ try {
 	getInferredName = Function('s', 'return { [s]() {} }[s].name;');
 } catch (e) {}
 
-module.exports = getInferredName && getInferredName.name === 'getInferredName' ? getInferredName : null;
+var inferred = function () {};
+module.exports = getInferredName && inferred.name === 'inferred' ? getInferredName : null;
 

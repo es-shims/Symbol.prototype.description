@@ -1,6 +1,7 @@
 'use strict';
 
 var shimDescription = require('../shim');
+var originalSymbol = typeof Symbol === 'function' ? Symbol : null;
 shimDescription();
 
 var hasSymbols = require('has-symbols')();
@@ -8,6 +9,7 @@ var test = require('tape');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 
 var runTests = require('./tests');
+var getInferredName = require('../helpers/getInferredName');
 
 test('shimmed', function (t) {
 	if (!hasSymbols) {
@@ -40,6 +42,11 @@ test('shimmed', function (t) {
 
 	t.test('only possible when shimmed (or inference is supported)', function (st) {
 		st.equal(Symbol('').description, '', 'Symbol("") description is empty string');
+		st.end();
+	});
+
+	t.test('ensure global Symbol is NOT shimmed', { skip: !getInferredName }, function (st) {
+		st.equal(Symbol, originalSymbol, 'global Symbol is not overridden');
 		st.end();
 	});
 
