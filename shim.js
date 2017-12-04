@@ -2,6 +2,7 @@
 
 var hasSymbols = require('has-symbols')();
 var polyfill = require('./polyfill');
+var getInferredName = require('./helpers/getInferredName');
 
 var gOPD = Object.getOwnPropertyDescriptor;
 var dP = Object.defineProperty;
@@ -28,6 +29,7 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	SymNew.prototype = Symbol.prototype;
 	setProto(SymNew, Symbol);
 	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign
+
 	var boundGetter = Function.call.bind(getter);
 	var wrappedGetter = function description() {
 		/* eslint no-invalid-this: 0 */
@@ -50,7 +52,10 @@ module.exports = function shimSymbolDescription() {
 	var isMissing = !desc || typeof desc.get !== 'function';
 	var isBroken = !isMissing && (typeof Symbol().description !== 'undefined' || Symbol('').description !== '');
 	if (isMissing || isBroken) {
-		return shimGlobal(getter);
+		if (!getInferredName) {
+			return shimGlobal(getter);
+		}
+		define(getter);
 	}
 	return getter;
 };
