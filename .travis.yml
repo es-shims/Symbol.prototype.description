@@ -2,12 +2,13 @@ language: node_js
 os:
  - linux
 node_js:
-  - "9.2"
-  - "8.9"
+  - "10.4"
+  - "9.11"
+  - "8.11"
   - "7.10"
-  - "6.12"
+  - "6.14"
   - "5.12"
-  - "4.8"
+  - "4.9"
   - "iojs-v3.3"
   - "iojs-v2.5"
   - "iojs-v1.8"
@@ -31,9 +32,39 @@ matrix:
       env: PRETEST=true
     - node_js: "lts/*"
       env: POSTTEST=true
+    - node_js: "10.3"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "10.2"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "10.1"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "10.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.10"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.9"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.8"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.7"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.6"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.5"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.4"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.3"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "9.2"
+      env: TEST=true ALLOW_FAILURE=true
     - node_js: "9.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "9.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "8.10"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "8.9"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "8.8"
       env: TEST=true ALLOW_FAILURE=true
@@ -72,6 +103,10 @@ matrix:
     - node_js: "7.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "7.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "6.13"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "6.12"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "6.11"
       env: TEST=true ALLOW_FAILURE=true
@@ -120,6 +155,8 @@ matrix:
     - node_js: "5.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "5.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "4.8"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "4.7"
       env: TEST=true ALLOW_FAILURE=true
@@ -175,4 +212,3 @@ matrix:
     - os: osx
     - env: TEST=true ALLOW_FAILURE=true
     - env: COVERAGE=true
-    - node_js: "9.2"
