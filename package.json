@@ -37,9 +37,9 @@
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
 		"@ljharb/eslint-config": "^12.2.1",
-		"eslint": "^4.16.0",
-		"nsp": "^3.1.0",
-		"tape": "^4.8.0"
+		"eslint": "^4.19.1",
+		"nsp": "^3.2.1",
+		"tape": "^4.9.1"
 	},
 	"engines": {
 		"node": ">= 0.12"
