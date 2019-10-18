@@ -19,5 +19,14 @@
 		"max-statements": [2, 11],
 		"no-magic-numbers": 0,
 		"symbol-description": 0
-	}
+	},
+
+	"overrides": [
+		{
+			"files": "test/**",
+			"rules": {
+				"no-invalid-this": 0,
+			},
+		},
+	],
 }
