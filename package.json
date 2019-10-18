@@ -6,11 +6,10 @@
 	"scripts": {
 		"lint": "eslint .",
 		"postlint": "es-shim-api --bound --skip-shim-returns-polyfill",
-		"security": "nsp check",
 		"tests-only": "node test && node test/shimmed",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
-		"posttest": "npm run security"
+		"posttest": "npx aud"
 	},
 	"repository": {
 		"type": "git",
@@ -38,7 +37,6 @@
 		"@es-shims/api": "^2.1.2",
 		"@ljharb/eslint-config": "^12.2.1",
 		"eslint": "^4.19.1",
-		"nsp": "^3.2.1",
 		"tape": "^4.9.1"
 	},
 	"engines": {
