@@ -9,7 +9,7 @@ var test = require('tape');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 
 var runTests = require('./tests');
-var getInferredName = require('../helpers/getInferredName');
+var getInferredName = require('es-abstract/helpers/getInferredName');
 
 test('shimmed', function (t) {
 	if (!hasSymbols) {
