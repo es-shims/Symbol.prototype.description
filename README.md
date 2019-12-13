@@ -8,8 +8,6 @@ Symbol.prototype.description <sup>[![Version Badge][npm-version-svg]][package-ur
 
 [![npm badge][npm-badge-png]][package-url]
 
-[![browser support][testling-svg]][testling-url]
-
 An ECMAScript spec-compliant `Symbol.prototype.description` shim. Invoke its "shim" method to shim Symbol.prototype.description if it is unavailable.
 *Note*: `Symbol#description` requires a true ES6 environment, specifically one with native Symbols.
 
@@ -52,8 +50,6 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/es-shims/Symbol.prototype.description
 [dev-deps-svg]: https://david-dm.org/es-shims/Symbol.prototype.description/dev-status.svg
 [dev-deps-url]: https://david-dm.org/es-shims/Symbol.prototype.description#info=devDependencies
-[testling-svg]: https://ci.testling.com/es-shims/Symbol.prototype.description.png
-[testling-url]: https://ci.testling.com/es-shims/Symbol.prototype.description
 [npm-badge-png]: https://nodei.co/npm/symbol.prototype.description.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/symbol.prototype.description.svg
 [license-url]: LICENSE
