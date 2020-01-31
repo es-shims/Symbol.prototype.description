@@ -37,7 +37,7 @@
 	},
 	"homepage": "https://github.com/es-shims/Symbol.prototype.description#readme",
 	"dependencies": {
-		"es-abstract": "^1.17.0-next.1",
+		"es-abstract": "^1.17.4",
 		"has-symbols": "^1.0.1"
 	},
 	"devDependencies": {

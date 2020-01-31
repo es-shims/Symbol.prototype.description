@@ -3,8 +3,9 @@
 var getPolyfill = require('./polyfill');
 var shim = require('./shim');
 var implementation = require('./implementation');
+var callBind = require('es-abstract/helpers/callBind');
 
-var bound = Function.call.bind(getPolyfill());
+var bound = callBind(getPolyfill());
 
 bound.shim = shim;
 bound.getPolyfill = getPolyfill;
