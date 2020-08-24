@@ -16,6 +16,13 @@ var define = function defineGetter(getter) {
 	});
 };
 
+var copyStaticProperties = function copyStatProperties(ctorNew, ctorOld) {
+	setProto(ctorNew, Object.getPrototypeOf(ctorOld));
+	Object.getOwnPropertyNames(ctorOld).forEach(function (k) {
+		Object.defineProperty(ctorNew, k, Object.getOwnPropertyDescriptor(ctorOld, k));
+	});
+};
+
 var shimGlobal = function shimGlobalSymbol(getter) {
 	var origSym = Function.apply.bind(Symbol);
 	var emptyStrings = Object.create ? Object.create(null) : {};
@@ -27,7 +34,7 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 		return sym;
 	};
 	SymNew.prototype = Symbol.prototype;
-	setProto(SymNew, Symbol);
+	copyStaticProperties(SymNew, Symbol);
 	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign
 
 	var boundGetter = Function.call.bind(getter);

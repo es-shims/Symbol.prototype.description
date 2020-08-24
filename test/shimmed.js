@@ -32,6 +32,18 @@ test('shimmed', function (t) {
 		st.end();
 	});
 
+	t.test('hasOwnProperty', function (st) {
+		const ownProperties = ['for', 'keyFor', 'asyncIterator', 'hasInstance', 'isConcatSpreadable', 'iterator', 'match', 'matchAll', 'replace', 'search', 'species', 'split', 'toPrimitive', 'toStringTag', 'unscopables', 'observable'];
+		// some old engine may miss
+		let atLeastOne = false;
+		for (var i = 0; i < ownProperties.length; i++) {
+			var p = ownProperties[i];
+			atLeastOne = atLeastOne || Object.prototype.hasOwnProperty.call(Symbol, p);
+		}
+		st.ok(atLeastOne, 'preserve Symbol\' own property');
+		st.end();
+	});
+
 	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad object value', { skip: !supportsStrictMode }, function (st) {
