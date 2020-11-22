@@ -9,7 +9,7 @@
 		"prepublish": "safe-publish-latest",
 		"lint": "eslint .",
 		"postlint": "es-shim-api --bound --skip-shim-returns-polyfill",
-		"tests-only": "tape 'test/**/*.js'",
+		"tests-only": "nyc tape 'test/**/*.js'",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
 		"posttest": "npx aud --production"
@@ -47,6 +47,7 @@
 		"auto-changelog": "^2.2.0",
 		"eslint": "^7.7.0",
 		"has-strict-mode": "^1.0.0",
+		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
 		"tape": "^5.0.1"
 	},
