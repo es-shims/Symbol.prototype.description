@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.3](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.2...v1.0.3) - 2020-11-23
+
+### Fixed
+
+- [Fix] ensure `Symbol` shim retains the same own properties as the original [`#13`](https://github.com/es-shims/Symbol.prototype.description/issues/13)
+
+### Commits
+
+- [Tests] migrate tests to Github Actions [`e9a2754`](https://github.com/es-shims/Symbol.prototype.description/commit/e9a2754a441c3c6e66dc57563501d237527e671e)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `tape` [`d5cff61`](https://github.com/es-shims/Symbol.prototype.description/commit/d5cff61d53786139227575115c9cc0260451a24e)
+- [Tests] add `implementation` test; use `tape` runner [`9a0afe5`](https://github.com/es-shims/Symbol.prototype.description/commit/9a0afe50a9f1183f5ca8e6e3435671a1f0f2b453)
+- [Tests] run `nyc` on all tests [`a33e2d6`](https://github.com/es-shims/Symbol.prototype.description/commit/a33e2d62d6a51321dde40d05dcf582d1a28d47cd)
+- [actions] add "Allow Edits" workflow [`b5f001e`](https://github.com/es-shims/Symbol.prototype.description/commit/b5f001eebd5149c2fa8a6397750994635cb7b83a)
+- [Deps] update `es-abstract`; use `call-bind` where applicable [`fe59e37`](https://github.com/es-shims/Symbol.prototype.description/commit/fe59e375a8d9906b415a504c53a17582eefef5be)
+- [Dev Deps] update `eslint`, `aud`, `auto-changelog` [`ee0c319`](https://github.com/es-shims/Symbol.prototype.description/commit/ee0c319d9b46d86666d8959487691f0d125dc5e5)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `tape` [`66d8264`](https://github.com/es-shims/Symbol.prototype.description/commit/66d826443587a4fbb232edd658473f48eaa618cc)
+- [Deps] update `es-abstract` [`fc88f15`](https://github.com/es-shims/Symbol.prototype.description/commit/fc88f154a4a980c5e989016b7d0dc1b1460509e4)
+- [Tests] fix failing tests [`86825ca`](https://github.com/es-shims/Symbol.prototype.description/commit/86825ca79b93439a576902cf2e40a4f7b4a7e5ff)
+- [Dev Deps] update `auto-changelog`; add `aud` [`94de63f`](https://github.com/es-shims/Symbol.prototype.description/commit/94de63f6722338f98b5e54dfc9774d6f9ac65eb0)
+- [meta] fix auto-changelog npmrc settings [`4c09543`](https://github.com/es-shims/Symbol.prototype.description/commit/4c09543bbcb28f331d60458021c5bae5bfab68b9)
+- [Deps] update `es-abstract` [`0a85899`](https://github.com/es-shims/Symbol.prototype.description/commit/0a85899de2faab0c73ec476bd087e0bf079b3e35)
+- [actions] switch Automatic Rebase workflow to `pull_request_target` event [`cf95a5c`](https://github.com/es-shims/Symbol.prototype.description/commit/cf95a5c72a752f9ac828cc8e280a14ae4b0a39b1)
+- [Dev Deps] update `auto-changelog` [`38e903a`](https://github.com/es-shims/Symbol.prototype.description/commit/38e903a9fb35eddde3730683e7d0af29dc1fdb87)
+- [Tests] only audit prod deps [`66fc2ad`](https://github.com/es-shims/Symbol.prototype.description/commit/66fc2ad1fab791162d2a6e3d9091e1bf28295114)
+- [Deps] update `es-abstract` [`4d9967e`](https://github.com/es-shims/Symbol.prototype.description/commit/4d9967e8beb5b01a07499162f34fad6122ffd6b2)
+- [Dev Deps] update `tape` [`749632c`](https://github.com/es-shims/Symbol.prototype.description/commit/749632c4c79386dc9feb7cdc12d6a9e7bbc639cf)
+
 ## [v1.0.2](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.1...v1.0.2) - 2019-12-13
 
 ### Commits
