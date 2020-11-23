@@ -39,7 +39,9 @@ test('shimmed', function (t) {
 		t.comment('expected original keys: ' + ownProperties);
 		for (var i = 0; i < ownProperties.length; i++) {
 			var p = ownProperties[i];
-			st.ok(has(Symbol, p), 'has own property: ' + p);
+			if (p !== 'length' && p !== 'arguments' && p !== 'caller' && p !== 'callee') {
+				st.ok(has(Symbol, p), 'has own property: ' + p);
+			}
 		}
 		st.end();
 	});
