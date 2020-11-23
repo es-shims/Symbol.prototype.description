@@ -4,6 +4,8 @@ var shimDescription = require('../shim');
 var originalSymbol = typeof Symbol === 'function' ? Symbol : null;
 shimDescription();
 
+var has = require('has');
+var keys = require('reflect.ownkeys');
 var hasSymbols = require('has-symbols')();
 var test = require('tape');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
@@ -29,6 +31,16 @@ test('shimmed', function (t) {
 
 		st.equal(desc.get.length, 0, 'getter length is 0');
 
+		st.end();
+	});
+
+	t.test('hasOwnProperty', function (st) {
+		var ownProperties = keys(originalSymbol);
+		t.comment('expected original keys: ' + ownProperties);
+		for (var i = 0; i < ownProperties.length; i++) {
+			var p = ownProperties[i];
+			st.ok(has(Symbol, p), 'has own property: ' + p);
+		}
 		st.end();
 	});
 

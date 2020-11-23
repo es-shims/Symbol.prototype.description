@@ -5,7 +5,9 @@ var polyfill = require('./polyfill');
 var getInferredName = require('es-abstract/helpers/getInferredName');
 
 var gOPD = Object.getOwnPropertyDescriptor;
+var gOPDs = require('object.getownpropertydescriptors/polyfill')();
 var dP = Object.defineProperty;
+var dPs = Object.defineProperties;
 var setProto = Object.setPrototypeOf;
 
 var define = function defineGetter(getter) {
@@ -28,6 +30,11 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	};
 	SymNew.prototype = Symbol.prototype;
 	setProto(SymNew, Symbol);
+	var props = gOPDs(Symbol);
+	delete props.length;
+	delete props.arguments;
+	delete props.caller;
+	dPs(SymNew, props);
 	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign
 
 	var boundGetter = Function.call.bind(getter);

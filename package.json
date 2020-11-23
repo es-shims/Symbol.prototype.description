@@ -39,7 +39,8 @@
 	"dependencies": {
 		"call-bind": "^1.0.0",
 		"es-abstract": "^1.18.0-next.1",
-		"has-symbols": "^1.0.1"
+		"has-symbols": "^1.0.1",
+		"object.getownpropertydescriptors": "^2.1.0"
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
@@ -49,6 +50,7 @@
 		"eslint": "^7.14.0",
 		"has-strict-mode": "^1.0.0",
 		"nyc": "^10.3.2",
+		"reflect.ownkeys": "^1.0.1",
 		"safe-publish-latest": "^1.1.4",
 		"tape": "^5.0.1"
 	},
