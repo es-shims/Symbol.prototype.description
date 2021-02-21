@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.4](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.3...v1.0.4) - 2021-02-21
+
+### Commits
+
+- [meta] do not publish github action workflow files [`c95b746`](https://github.com/es-shims/Symbol.prototype.description/commit/c95b746be2b15fee94090a65431623a45e79d96a)
+- [readme] fix repo URLs; remove travis badge [`91f9c78`](https://github.com/es-shims/Symbol.prototype.description/commit/91f9c781ef4873a4c5bb08d5f7d2f8187045660e)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `has-strict-mode`, `reflect-ownkeys`, `tape` [`c14b5eb`](https://github.com/es-shims/Symbol.prototype.description/commit/c14b5ebd86e715d04e6253edf5706c957869bea2)
+- [actions] update workflows [`828203c`](https://github.com/es-shims/Symbol.prototype.description/commit/828203cbc4ab4d9ac2bab5e104c916caf737cd97)
+- [Deps] update `call-bind`, `es-abstract`, `object.getownpropertydescriptors` [`a5816d2`](https://github.com/es-shims/Symbol.prototype.description/commit/a5816d2e08ec046462591ce23604036f29e2b1b1)
+- [Tests] increase coverage [`73d9e5b`](https://github.com/es-shims/Symbol.prototype.description/commit/73d9e5b60238f39f3f17ea45e3e396af518aa36e)
+
 ## [v1.0.3](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.2...v1.0.3) - 2020-11-23
 
 ### Fixed
