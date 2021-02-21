@@ -1,8 +1,7 @@
 'use strict';
 
-var shimDescription = require('../shim');
 var originalSymbol = typeof Symbol === 'function' ? Symbol : null;
-shimDescription();
+require('../auto');
 
 var has = require('has');
 var keys = require('reflect.ownkeys');
