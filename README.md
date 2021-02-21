@@ -1,6 +1,5 @@
-Symbol.prototype.description <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+# Symbol.prototype.description <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-[![Build Status][travis-svg]][travis-url]
 [![dependency status][deps-svg]][deps-url]
 [![dev dependency status][dev-deps-svg]][dev-deps-url]
 [![License][license-image]][license-url]
@@ -43,15 +42,13 @@ assert(Symbol('').description === ''); // this works fine!
 Simply clone the repo, `npm install`, and run `npm test`
 
 [package-url]: https://npmjs.com/package/symbol.prototype.description
-[npm-version-svg]: http://versionbadg.es/es-shims/Symbol.prototype.description.svg
-[travis-svg]: https://travis-ci.org/es-shims/Symbol.prototype.description.svg
-[travis-url]: https://travis-ci.org/es-shims/Symbol.prototype.description
+[npm-version-svg]: https://versionbadg.es/es-shims/Symbol.prototype.description.svg
 [deps-svg]: https://david-dm.org/es-shims/Symbol.prototype.description.svg
 [deps-url]: https://david-dm.org/es-shims/Symbol.prototype.description
 [dev-deps-svg]: https://david-dm.org/es-shims/Symbol.prototype.description/dev-status.svg
 [dev-deps-url]: https://david-dm.org/es-shims/Symbol.prototype.description#info=devDependencies
 [npm-badge-png]: https://nodei.co/npm/symbol.prototype.description.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/symbol.prototype.description.svg
+[license-image]: https://img.shields.io/npm/l/symbol.prototype.description.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/symbol.prototype.description.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=symbol.prototype.description
+[downloads-image]: https://img.shields.io/npm/dm/symbol.prototype.description.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=symbol.prototype.description
