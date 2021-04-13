@@ -12,7 +12,9 @@ jobs:
       - uses: ljharb/actions/node/matrix@main
         id: set-matrix
         with:
-          preset: '0.x'
+          requireds: '0.12'
+          optionals: '~0.11.15'
+          type: 'minors'
 
   stable:
     needs: [matrix]
