@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.5](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.4...v1.0.5) - 2021-08-17
+
+### Commits
+
+- [actions] use `node/install` instead of `node/run`; use `codecov` action [`071b81c`](https://github.com/es-shims/Symbol.prototype.description/commit/071b81ce237200d99e85cc8d715da67e1dbf4356)
+- [Refactor] use `get-symbol-description`, extracted from `es-abstract` [`158e940`](https://github.com/es-shims/Symbol.prototype.description/commit/158e940d775120ac70033218aabf188986be42d8)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `tape` [`8ba38ec`](https://github.com/es-shims/Symbol.prototype.description/commit/8ba38ec2d1968aaecb8f8a8c0d2643a854ae41f8)
+- [actions] restore 0.x test config, from 071b81c [`d0562a9`](https://github.com/es-shims/Symbol.prototype.description/commit/d0562a912ff32e2e6d29904d178e3470880e6a97)
+- [Deps] update `es-abstract`, `has-symbols` [`4be56f3`](https://github.com/es-shims/Symbol.prototype.description/commit/4be56f33aced9fa82e31d1a3abffddb99dc713e7)
+- [Dev Deps] update `eslint`, `tape` [`184c012`](https://github.com/es-shims/Symbol.prototype.description/commit/184c0128389671cca645ecde4183fcc193d48b3d)
+- [meta] use `prepublishOnly` script for npm 7+ [`e93c72f`](https://github.com/es-shims/Symbol.prototype.description/commit/e93c72f9fb1537f5fc30c5e41061d4a140a76072)
+- [meta] add `sideEffects` flag [`57faa96`](https://github.com/es-shims/Symbol.prototype.description/commit/57faa962af1118160db4a043b204ed16209daf41)
+
 ## [v1.0.4](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.3...v1.0.4) - 2021-02-21
 
 ### Commits
