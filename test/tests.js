@@ -1,7 +1,7 @@
 'use strict';
 
 var hasSymbols = require('has-symbols')();
-var getInferredName = require('es-abstract/helpers/getInferredName');
+var getInferredName = require('get-symbol-description/getInferredName');
 
 module.exports = function (description, t) {
 	t.test('Symbol description', { skip: !hasSymbols }, function (st) {

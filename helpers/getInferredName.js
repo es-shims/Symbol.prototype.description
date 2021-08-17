@@ -1,3 +1,4 @@
 'use strict';
 
-module.exports = require('es-abstract/helpers/getInferredName');
+// TODO: remove, semver-major
+module.exports = require('get-symbol-description/getInferredName');

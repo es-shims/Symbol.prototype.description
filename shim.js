@@ -2,7 +2,7 @@
 
 var hasSymbols = require('has-symbols')();
 var polyfill = require('./polyfill');
-var getInferredName = require('es-abstract/helpers/getInferredName');
+var getInferredName = require('get-symbol-description/getInferredName');
 
 var gOPD = Object.getOwnPropertyDescriptor;
 var gOPDs = require('object.getownpropertydescriptors/polyfill')();

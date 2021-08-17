@@ -39,7 +39,7 @@
 	"homepage": "https://github.com/es-shims/Symbol.prototype.description#readme",
 	"dependencies": {
 		"call-bind": "^1.0.2",
-		"es-abstract": "^1.18.0",
+		"get-symbol-description": "^1.0.0",
 		"has-symbols": "^1.0.2",
 		"object.getownpropertydescriptors": "^2.1.2"
 	},
