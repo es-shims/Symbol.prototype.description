@@ -3,6 +3,7 @@
 	"version": "1.0.4",
 	"description": "Spec-compliant shim for Symbol.prototype.description proposal.",
 	"main": "index.js",
+	"sideEffects": false,
 	"scripts": {
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
