@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.6](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.5...v1.0.6) - 2024-02-15
+
+### Commits
+
+- [actions] reuse common workflows [`92fa371`](https://github.com/es-shims/Symbol.prototype.description/commit/92fa371012bfd0c69fb431113573dde36921aee9)
+- [Fix] behave properly in a pre-Symbol environment [`d61003b`](https://github.com/es-shims/Symbol.prototype.description/commit/d61003b2a3c9260d628104de5b31091de66e13a6)
+- [meta] use `npmignore` to autogenerate an npmignore file [`7ba5498`](https://github.com/es-shims/Symbol.prototype.description/commit/7ba5498eadb8dc26eeb8d7ca13a2cef3a56ebecf)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `safe-publish-latest`, `tape` [`b49e7eb`](https://github.com/es-shims/Symbol.prototype.description/commit/b49e7eb0d5767e0b687c62b80e92bd85d50607e7)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `reflect.ownkeys`, `tape` [`e6351a6`](https://github.com/es-shims/Symbol.prototype.description/commit/e6351a6b69594cad20646011c4f2a1067a3012da)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud` ,`npmignore`, `reflect.ownkeys`, `tape` [`409cc9b`](https://github.com/es-shims/Symbol.prototype.description/commit/409cc9b295520c354278277e449ec9561bf96380)
+- [actions] update rebase action to use reusable workflow [`5059d72`](https://github.com/es-shims/Symbol.prototype.description/commit/5059d72971cccba579cc3ee02482f074ab2a1d6f)
+- [actions] update codecov uploader [`1e98508`](https://github.com/es-shims/Symbol.prototype.description/commit/1e985080b8a111ab10e71caf12627c8c847cb6f5)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud`, `reflect.ownkeys`, `tape` [`67b55d3`](https://github.com/es-shims/Symbol.prototype.description/commit/67b55d3031bb039fc5a1a43d53c09dbf0f727bcd)
+- [Deps] update `call-bind`, `get-symbol-description`, `object.getownpropertydescriptors` [`19c078d`](https://github.com/es-shims/Symbol.prototype.description/commit/19c078dc5b6d83741573f44b03da748768be7e99)
+- [readme] add github actions/codecov badges [`79fa955`](https://github.com/es-shims/Symbol.prototype.description/commit/79fa9555018a2ddefcab18e86a0e1949ac997f68)
+- [Dev Deps] update `@ljharb/eslint-config`, `@es-shims/api`, `reflect.ownkeys` [`cd0fa9d`](https://github.com/es-shims/Symbol.prototype.description/commit/cd0fa9d850f7a1e2bb910e9c8023e2fef322a51c)
+- [Deps] update `has-symbol`, `object.getownpropertydescriptors` [`462aace`](https://github.com/es-shims/Symbol.prototype.description/commit/462aace317aabd057e03d4e3e366631bedecc7d2)
+- [actions] update workflows [`75f45ff`](https://github.com/es-shims/Symbol.prototype.description/commit/75f45ff6e47d7d294eee8cc202ff18bdfb2d9103)
+- [Deps] update `object.getownpropertydescriptors` [`643f896`](https://github.com/es-shims/Symbol.prototype.description/commit/643f896c7132be9e6172dac4888c9e75c1e969d0)
+- [Deps] update `object.getownpropertydescriptors` [`c6b9eba`](https://github.com/es-shims/Symbol.prototype.description/commit/c6b9eba1046acd35768cc7e65e0f193589629520)
+
 ## [v1.0.5](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.4...v1.0.5) - 2021-08-17
 
 ### Commits
