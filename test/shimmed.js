@@ -3,7 +3,7 @@
 var originalSymbol = typeof Symbol === 'function' ? Symbol : null;
 require('../auto');
 
-var has = require('has');
+var hasOwn = require('hasown');
 var keys = require('reflect.ownkeys');
 var hasSymbols = require('has-symbols')();
 var test = require('tape');
@@ -14,7 +14,7 @@ var getInferredName = require('get-symbol-description/getInferredName');
 
 test('shimmed', function (t) {
 	if (!hasSymbols) {
-		t.fail('Symbols not supported in this environment');
+		t.comment('Symbols not supported in this environment');
 		return t.end();
 	}
 
@@ -39,7 +39,7 @@ test('shimmed', function (t) {
 		for (var i = 0; i < ownProperties.length; i++) {
 			var p = ownProperties[i];
 			if (p !== 'length' && p !== 'arguments' && p !== 'caller' && p !== 'callee') {
-				st.ok(has(Symbol, p), 'has own property: ' + p);
+				st.ok(hasOwn(Symbol, p), 'has own property: ' + p);
 			}
 		}
 		st.end();
@@ -48,8 +48,8 @@ test('shimmed', function (t) {
 	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad object value', { skip: !supportsStrictMode }, function (st) {
-		st.throws(function () { return Object.values(undefined); }, TypeError, 'undefined is not an object');
-		st.throws(function () { return Object.values(null); }, TypeError, 'null is not an object');
+		st['throws'](function () { return Object.values(undefined); }, TypeError, 'undefined is not an object');
+		st['throws'](function () { return Object.values(null); }, TypeError, 'null is not an object');
 		st.end();
 	});
 

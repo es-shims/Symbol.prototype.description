@@ -4,6 +4,16 @@ var hasSymbols = require('has-symbols')();
 var getInferredName = require('get-symbol-description/getInferredName');
 
 module.exports = function (description, t) {
+	t.test('Symbols not supported', { skip: hasSymbols }, function (st) {
+		st['throws'](
+			function () { description('foo'); },
+			SyntaxError,
+			'throws when Symbols not supported'
+		);
+
+		st.end();
+	});
+
 	t.test('Symbol description', { skip: !hasSymbols }, function (st) {
 		st.equal(description(Symbol()), undefined, 'Symbol() description is undefined');
 		st.equal(description(Symbol(undefined)), undefined, 'Symbol(undefined) description is undefined');

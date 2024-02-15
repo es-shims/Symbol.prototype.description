@@ -15,7 +15,6 @@
 			"rules": {
 				"consistent-return": 1,
 				"no-invalid-this": 0,
-				"dot-notation": [2, { "allowKeywords": true }],
 			},
 		},
 	],

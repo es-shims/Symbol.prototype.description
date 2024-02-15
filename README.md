@@ -2,33 +2,32 @@
 
 [![github actions][actions-image]][actions-url]
 [![coverage][codecov-image]][codecov-url]
-[![dependency status][deps-svg]][deps-url]
-[![dev dependency status][dev-deps-svg]][dev-deps-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][npm-badge-png]][package-url]
 
 An ECMAScript spec-compliant `Symbol.prototype.description` shim. Invoke its "shim" method to shim Symbol.prototype.description if it is unavailable.
-*Note*: `Symbol#description` requires a true ES6 environment, specifically one with native Symbols.
+*Note*: `Symbol#description` requires a true ES6 environment, specifically one with native Symbols (eg, node >= v11.15.0)
 
-This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES6-supported environment and complies with the [spec](https://github.com/michaelficarra/Symbol-description-proposal/).
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES6-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-symbol.prototype.description).
 
 Most common usage:
 ```js
 var description = require('symbol.prototype.description');
+var assert = require('assert');
 
 assert(description(Symbol('foo')) === 'foo');
 assert(description(Symbol()) === undefined);
 assert(description(Symbol(undefined)) === undefined);
 assert(description(Symbol(null)) === 'null');
 
-// note: this should be the empty string, but in many engines,
-// it is impossible to distinguish Symbol() and Symbol('')
-// without globally replacing `Symbol`
-assert(description(Symbol('')) === undefined);
+if (!('description' in Symbol.prototype)) {
+	// note: this should be the empty string, but in many engines,
+	// it is impossible to distinguish Symbol() and Symbol('')
+	// without globally replacing `Symbol`
+	assert(description(Symbol('')) === undefined);
 
-if (!Symbol.prototype.description) {
 	description.shim();
 }
 

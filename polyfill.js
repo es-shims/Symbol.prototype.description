@@ -7,7 +7,7 @@ var gOPD = Object.getOwnPropertyDescriptor;
 
 module.exports = function descriptionPolyfill() {
 	if (!hasSymbols || typeof gOPD !== 'function') {
-		return null;
+		return implementation;
 	}
 
 	var desc = gOPD(Symbol.prototype, 'description');
