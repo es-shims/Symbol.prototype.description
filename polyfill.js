@@ -3,7 +3,7 @@
 var hasSymbols = require('has-symbols')();
 
 var implementation = require('./implementation');
-var gOPD = Object.getOwnPropertyDescriptor;
+var gOPD = require('gopd');
 
 module.exports = function descriptionPolyfill() {
 	if (!hasSymbols || typeof gOPD !== 'function') {

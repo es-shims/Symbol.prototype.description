@@ -4,11 +4,12 @@ var hasSymbols = require('has-symbols')();
 var polyfill = require('./polyfill');
 var getInferredName = require('get-symbol-description/getInferredName');
 
-var gOPD = Object.getOwnPropertyDescriptor;
+var $Object = require('es-object-atoms');
+var gOPD = require('gopd');
 var gOPDs = require('object.getownpropertydescriptors/polyfill')();
-var dP = Object.defineProperty;
-var dPs = Object.defineProperties;
-var setProto = Object.setPrototypeOf;
+var dP = $Object.defineProperty;
+var dPs = $Object.defineProperties;
+var setProto = $Object.setPrototypeOf;
 
 var define = function defineGetter(getter) {
 	dP(Symbol.prototype, 'description', {
@@ -20,7 +21,7 @@ var define = function defineGetter(getter) {
 
 var shimGlobal = function shimGlobalSymbol(getter) {
 	var origSym = Function.apply.bind(Symbol);
-	var emptyStrings = Object.create ? Object.create(null) : {};
+	var emptyStrings = $Object.create ? $Object.create(null) : {};
 	var SymNew = function Symbol() {
 		var sym = origSym(this, arguments);
 		if (arguments.length > 0 && arguments[0] === '') {
