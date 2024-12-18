@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.7](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.6...v1.0.7) - 2024-12-18
+
+### Commits
+
+- [Robustness] use `gopd` and `es-object-atoms` [`babe493`](https://github.com/es-shims/Symbol.prototype.description/commit/babe493ead1565e929a8b63ddfafe36870adb976)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `auto-changelog`, `hasown`, `tape` [`4ecdf7b`](https://github.com/es-shims/Symbol.prototype.description/commit/4ecdf7bb42f95db8fd17c96f364b2442708fcdd0)
+- [Deps] update `call-bind`, `has-symbols`, `object.getownpropertydescriptors` [`3f32d5d`](https://github.com/es-shims/Symbol.prototype.description/commit/3f32d5d40db9ec8db8a47c5cdae22f687051107f)
+- [Tests] replace `aud` with `npm audit` [`fc695b1`](https://github.com/es-shims/Symbol.prototype.description/commit/fc695b167a4dccac5ff4482e0daea59c2eaee4be)
+- [Dev Deps] add missing peer dep [`0101aa6`](https://github.com/es-shims/Symbol.prototype.description/commit/0101aa6c7a51ca76ef8c6f9ae74b7c7c4bc02cf7)
+
 ## [v1.0.6](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.5...v1.0.6) - 2024-02-15
 
 ### Commits
