@@ -4,7 +4,7 @@ var originalSymbol = typeof Symbol === 'function' ? Symbol : null;
 require('../auto');
 
 var hasOwn = require('hasown');
-var keys = require('reflect.ownkeys');
+var keys = require('own-keys');
 var hasSymbols = require('has-symbols')();
 var test = require('tape');
 var hasStrictMode = require('has-strict-mode')();
@@ -16,7 +16,7 @@ var getInferredName = require('get-symbol-description/getInferredName');
 test('shimmed', function (t) {
 	if (!hasSymbols) {
 		t.comment('Symbols not supported in this environment');
-		return t.end();
+		t.end();
 	}
 
 	t.test('enumerability', function (et) {
