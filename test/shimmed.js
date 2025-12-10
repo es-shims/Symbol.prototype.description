@@ -7,6 +7,7 @@ var hasOwn = require('hasown');
 var keys = require('reflect.ownkeys');
 var hasSymbols = require('has-symbols')();
 var test = require('tape');
+var hasStrictMode = require('has-strict-mode')();
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 
 var runTests = require('./tests');
@@ -45,9 +46,7 @@ test('shimmed', function (t) {
 		st.end();
 	});
 
-	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
-
-	t.test('bad object value', { skip: !supportsStrictMode }, function (st) {
+	t.test('bad object value', { skip: !hasStrictMode }, function (st) {
 		st['throws'](function () { return Object.values(undefined); }, TypeError, 'undefined is not an object');
 		st['throws'](function () { return Object.values(null); }, TypeError, 'null is not an object');
 		st.end();
