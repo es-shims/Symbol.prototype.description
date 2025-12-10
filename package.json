@@ -47,7 +47,7 @@
 		"get-symbol-description": "^1.1.0",
 		"gopd": "^1.2.0",
 		"has-symbols": "^1.1.0",
-		"object.getownpropertydescriptors": "^2.1.8"
+		"object.getownpropertydescriptors": "^2.1.9"
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.5.1",
