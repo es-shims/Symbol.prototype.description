@@ -36,7 +36,7 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	delete props.arguments;
 	delete props.caller;
 	dPs(SymNew, props);
-	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign
+	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign, no-implicit-globals
 
 	var boundGetter = Function.call.bind(getter);
 	var wrappedGetter = function description() {
