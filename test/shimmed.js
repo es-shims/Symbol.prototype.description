@@ -13,12 +13,7 @@ var isEnumerable = Object.prototype.propertyIsEnumerable;
 var runTests = require('./tests');
 var getInferredName = require('get-symbol-description/getInferredName');
 
-test('shimmed', function (t) {
-	if (!hasSymbols) {
-		t.comment('Symbols not supported in this environment');
-		t.end();
-	}
-
+test('shimmed', { skip: !hasSymbols && 'Symbols not supported in this environment' }, function (t) {
 	t.test('enumerability', function (et) {
 		et.equal(false, isEnumerable.call(Symbol.prototype, 'description'), 'Symbol.prototype.description is not enumerable');
 		et.end();
