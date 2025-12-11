@@ -6,6 +6,7 @@ var getInferredName = require('get-symbol-description/getInferredName');
 
 var $Object = require('es-object-atoms');
 var gOPD = require('gopd');
+var callBind = require('call-bind');
 var gOPDs = require('object.getownpropertydescriptors/polyfill')();
 var dP = $Object.defineProperty;
 var dPs = $Object.defineProperties;
@@ -20,7 +21,7 @@ var define = function defineGetter(getter) {
 };
 
 var shimGlobal = function shimGlobalSymbol(getter) {
-	var origSym = Function.apply.bind(Symbol);
+	var origSym = callBind.apply(Symbol);
 	var emptyStrings = $Object.create ? $Object.create(null) : {};
 	var SymNew = function Symbol() {
 		var sym = origSym(this, arguments);
@@ -38,7 +39,7 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	dPs(SymNew, props);
 	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign, no-implicit-globals
 
-	var boundGetter = Function.call.bind(getter);
+	var boundGetter = callBind(getter);
 	var wrappedGetter = function description() {
 		/* eslint no-invalid-this: 0 */
 		var symbolDescription = boundGetter(this);
