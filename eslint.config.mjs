@@ -11,6 +11,7 @@ export default [
 					properties: 'never',
 				},
 			],
+			'no-extra-parens': 'off',
 			'no-magic-numbers': 'off',
 			'symbol-description': 'off',
 		},

@@ -1,8 +1,9 @@
 'use strict';
 
 var hasSymbols = require('has-symbols')();
-var polyfill = require('./polyfill');
 var getInferredName = require('get-symbol-description/getInferredName');
+
+var polyfill = require('./polyfill');
 
 var $Object = require('es-object-atoms');
 var gOPD = require('gopd');
@@ -12,6 +13,10 @@ var dP = $Object.defineProperty;
 var dPs = $Object.defineProperties;
 var setProto = $Object.setPrototypeOf;
 
+/** @typedef {import('.').Getter} Getter */
+/** @typedef {import('.')} BoundGetter */
+
+/** @param {Getter} getter */
 var define = function defineGetter(getter) {
 	dP(Symbol.prototype, 'description', {
 		configurable: true,
@@ -20,11 +25,12 @@ var define = function defineGetter(getter) {
 	});
 };
 
+/** @param {Getter} getter */
 var shimGlobal = function shimGlobalSymbol(getter) {
 	var origSym = callBind.apply(Symbol);
 	var emptyStrings = $Object.create ? $Object.create(null) : {};
-	var SymNew = function Symbol() {
-		var sym = origSym(this, arguments);
+	var SymNew = /** @type {(this: symbol, description?: string) => symbol} */ function Symbol() {
+		var sym = origSym(this, /** @type {Parameters<typeof Symbol>} */ (/** @type {unknown} */ (arguments)));
 		if (arguments.length > 0 && arguments[0] === '') {
 			emptyStrings[sym] = true;
 		}
@@ -37,9 +43,12 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	delete props.arguments;
 	delete props.caller;
 	dPs(SymNew, props);
+	// @ts-expect-error properties are copied above
 	Symbol = SymNew; // eslint-disable-line no-native-reassign, no-global-assign, no-implicit-globals
 
+	/** @type {BoundGetter} */
 	var boundGetter = callBind(getter);
+	/** @type {Getter} */
 	var wrappedGetter = function description() {
 		/* eslint no-invalid-this: 0 */
 		var symbolDescription = boundGetter(this);
@@ -52,8 +61,9 @@ var shimGlobal = function shimGlobalSymbol(getter) {
 	return wrappedGetter;
 };
 
+/** @type {import('./shim')} */
 module.exports = function shimSymbolDescription() {
-	if (!hasSymbols) {
+	if (!hasSymbols || !gOPD) {
 		return false;
 	}
 	var desc = gOPD(Symbol.prototype, 'description');

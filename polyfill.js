@@ -5,6 +5,7 @@ var hasSymbols = require('has-symbols')();
 var implementation = require('./implementation');
 var gOPD = require('gopd');
 
+/** @type {import('./polyfill')} */
 module.exports = function descriptionPolyfill() {
 	if (!hasSymbols || typeof gOPD !== 'function') {
 		return implementation;

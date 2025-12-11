@@ -8,6 +8,7 @@ var keys = require('own-keys');
 var hasSymbols = require('has-symbols')();
 var test = require('tape');
 var hasStrictMode = require('has-strict-mode')();
+var inspect = require('object-inspect');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 
 var runTests = require('./tests');
@@ -22,27 +23,33 @@ test('shimmed', { skip: !hasSymbols && 'Symbols not supported in this environmen
 	t.test('getter', function (st) {
 		var desc = Object.getOwnPropertyDescriptor(Symbol.prototype, 'description');
 		st.ok(desc, 'has a descriptor');
-		st.equal(typeof desc.get, 'function', '"get" is a function');
-
-		st.equal(desc.get.length, 0, 'getter length is 0');
+		if (desc) {
+			st.equal(typeof desc.get, 'function', '"get" is a function');
+			if (desc.get) {
+				st.equal(desc.get.length, 0, 'getter length is 0');
+			}
+		}
 
 		st.end();
 	});
 
 	t.test('hasOwnProperty', function (st) {
-		var ownProperties = keys(originalSymbol);
+		var ownProperties = keys(/** @type {NonNullable<typeof originalSymbol>} */ (originalSymbol));
 		t.comment('expected original keys: ' + ownProperties);
 		for (var i = 0; i < ownProperties.length; i++) {
 			var p = ownProperties[i];
+			// @ts-expect-error 'callee' is expected in some engines
 			if (p !== 'length' && p !== 'arguments' && p !== 'caller' && p !== 'callee') {
-				st.ok(hasOwn(Symbol, p), 'has own property: ' + p);
+				st.ok(hasOwn(Symbol, p), 'has own property: ' + inspect(p));
 			}
 		}
 		st.end();
 	});
 
 	t.test('bad object value', { skip: !hasStrictMode }, function (st) {
+		// @ts-expect-error
 		st['throws'](function () { return Object.values(undefined); }, TypeError, 'undefined is not an object');
+		// @ts-expect-error
 		st['throws'](function () { return Object.values(null); }, TypeError, 'null is not an object');
 		st.end();
 	});
