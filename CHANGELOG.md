@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.0](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.7...v2.0.0) - 2025-12-11
+
+### Commits
+
+- [New] add types [`ddf8fe7`](https://github.com/es-shims/Symbol.prototype.description/commit/ddf8fe7dfaf3f2394eaee21e1fe5d68439cd9844)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config` [`9bfaed1`](https://github.com/es-shims/Symbol.prototype.description/commit/9bfaed15ec27c684a312911bdae806d81103f51b)
+- [Breaking] update to `@es-shims/api` v3 [`f89a1dd`](https://github.com/es-shims/Symbol.prototype.description/commit/f89a1dd06b65db5befc95b97de1b6e4da241bde1)
+- [Breaking] add `exports` [`d789908`](https://github.com/es-shims/Symbol.prototype.description/commit/d7899084f3f555d311100950e6fae1cecb21cac9)
+- [Tests] use `skip` [`fff5c7d`](https://github.com/es-shims/Symbol.prototype.description/commit/fff5c7d8494a3e304f58e0ba9744ab72a66db919)
+- [Tests] use `own-keys` instead of `reflect.ownkeys` [`4fa99da`](https://github.com/es-shims/Symbol.prototype.description/commit/4fa99da618a35dfaf061fd8a82efefa1bfb859b4)
+- [Dev Deps] update `@ljharb/eslint-config`, `has-strict-mode`, `reflect.ownkeys` [`afb7a5e`](https://github.com/es-shims/Symbol.prototype.description/commit/afb7a5edba87217834ec5ab2ee4c80c3e6e65ea0)
+- [Refactor] use `call-bind` more [`01a39b1`](https://github.com/es-shims/Symbol.prototype.description/commit/01a39b1743f17f847b1e332ca3a996608f772d1a)
+- [Tests] use `has-strict-mode` [`cf076f9`](https://github.com/es-shims/Symbol.prototype.description/commit/cf076f982af9a3cbd14274cc12bdc3d9dd05bdb4)
+- [Dev Deps] update `@ljharb/eslint-config`, `has-strict-mode`, `npmignore`, `reflect.ownkeys` [`7f5712f`](https://github.com/es-shims/Symbol.prototype.description/commit/7f5712fb1590994b9b2afd4b5877dcb3766666f4)
+- [Deps] update `es-object-atoms`, `get-symbol-description` [`19b8f29`](https://github.com/es-shims/Symbol.prototype.description/commit/19b8f296466518ecde4118adc7e1813be18db046)
+- [Dev Deps] update `@ljharb/eslint-config` [`7cef23c`](https://github.com/es-shims/Symbol.prototype.description/commit/7cef23c8cb205e4ed852895498b5ea0610e16209)
+- [Deps] update `object.getownpropertydescriptors` [`0feb2fd`](https://github.com/es-shims/Symbol.prototype.description/commit/0feb2fd5ad81d7b5cfd2293068f613369f481f80)
+
 ## [v1.0.7](https://github.com/es-shims/Symbol.prototype.description/compare/v1.0.6...v1.0.7) - 2024-12-18
 
 ### Commits
