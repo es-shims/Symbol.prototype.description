@@ -15,6 +15,7 @@ This package implements the [es-shim API](https://github.com/es-shims/api) inter
 Most common usage:
 ```js
 var description = require('symbol.prototype.description');
+var shimDescription = require('symbol.prototype.description/shim');
 var assert = require('assert');
 
 assert(description(Symbol('foo')) === 'foo');
@@ -28,7 +29,7 @@ if (!('description' in Symbol.prototype)) {
 	// without globally replacing `Symbol`
 	assert(description(Symbol('')) === undefined);
 
-	description.shim();
+	shimDescription();
 }
 
 assert(description(Symbol('foo')) === Symbol('foo').description);
